@@ -30,7 +30,7 @@ export const NavbarContainer = styled.div`
 `;
 
 export const NavbarLogo = styled(LinkRouter)`
-  color: #01bf71;
+  color: #25b3ac;
   justify-self: flex-start;
   cursor: pointer;
   font-size: 1.5rem;
@@ -73,7 +73,7 @@ export const NavItem = styled.li`
 `;
 
 export const NavLinks = styled(LinkScroll)`
-color: #01bf71;
+color: #25b3ac;
 display: flex;
 align-items: center;
 text-decoration: none;
@@ -82,6 +82,6 @@ height: 100%;
 cursor: pointer;
 
 &.active {
-    border-bottom: 3px solid #01bf71;
+    border-bottom: 3px solid #25b3ac;
 }
 `;

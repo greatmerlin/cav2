@@ -44,7 +44,7 @@ function ChatRoom() {
     background: #000;
     padding: 10px;
     border-radius: 4px;
-    color: #01bf71;
+    color: #25b3ac;
     font-size: 20px;
     cursor: pointer;
     text-align: center;

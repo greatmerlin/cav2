@@ -33,7 +33,7 @@ const MainSection = () => {
         </MainP>
         <MainBtnWrapper>
           <Button
-            to="/setplayername"
+            to="/"
             onMouseEnter={onHover}
             onMouseLeave={onHover}
             primary="true"
