@@ -20,10 +20,10 @@ const Sidebar = ({ isOpen, toggle }) => {
         <SidebarMenu>
           <SidebarLink to="/about">About</SidebarLink>
           <SidebarLink to="/howtoplay">How to play</SidebarLink>
-          <SidebarLink to="/highscores">Chat Room</SidebarLink>
+          <SidebarLink to="/chat">Chat Room</SidebarLink>
         </SidebarMenu>
         <SideBtnWrap>
-          <SidebarRoute to="/setplayername">Get started</SidebarRoute>
+          <SidebarRoute to="/">Get started</SidebarRoute>
         </SideBtnWrap>
       </SidebarWrapper>
     </SidebarContainer>
