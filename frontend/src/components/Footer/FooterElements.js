@@ -49,7 +49,7 @@ export const SocialMediaWrap = styled.div`
   }
 `;
 export const SocialLogo = styled(Link)`
-  color: #fff;
+  color: #25b3ac;
   justify-self: start;
   cursor: pointer;
   text-decoration: none;
@@ -67,19 +67,21 @@ export const WebsiteRights = styled.small`
 
 export const DevelopersDiv = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   width: 240px;
   color: #fff;
 `;
 
 export const DevelopedBy = styled.div`
-  color: #fff;
+  color: #25b3ac;
   font-size: 12px;
-  width: 200px;
+  width: 300px;
+  margin: 10px;
 `;
 
 export const Developer = styled.div`
   color: #fff;
   width: 400px;
+  margin: 10px;
 `;
