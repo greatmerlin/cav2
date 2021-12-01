@@ -53,7 +53,8 @@ function ChatRoom() {
   `;
 
   return (
-    <div className="card">
+    <div>
+      <div className="card">
       <form onSubmit={onMessageSubmit}>
         <h1>Messenger</h1>
         <div className="name-field">
@@ -80,7 +81,8 @@ function ChatRoom() {
         <h1>Chat Log</h1>
         {renderChat()}
       </div>
-	  <BackButton to="/"> Back </BackButton>
+    </div>
+      <BackButton to="/"> Back </BackButton>
     </div>
   );
 }
