@@ -58,7 +58,7 @@ export const MainSectionContent = styled.div`
 `;
 
 export const MainH1 = styled.h1`
-  color: #fff;
+  color: #25b3ac;
   font-size: 48px;
   text-align: center;
 
