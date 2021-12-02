@@ -23,7 +23,7 @@ const Sidebar = ({ isOpen, toggle }) => {
           <SidebarLink to="/chat">Chat Room</SidebarLink>
         </SidebarMenu>
         <SideBtnWrap>
-          <SidebarRoute to="/">Get started</SidebarRoute>
+          <SidebarRoute to="/login">Get started</SidebarRoute>
         </SideBtnWrap>
       </SidebarWrapper>
     </SidebarContainer>

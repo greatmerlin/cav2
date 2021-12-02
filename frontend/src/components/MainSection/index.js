@@ -33,7 +33,7 @@ const MainSection = () => {
         </MainP>
         <MainBtnWrapper>
           <Button
-            to="/"
+            to="/login"
             onMouseEnter={onHover}
             onMouseLeave={onHover}
             primary="true"

@@ -33,8 +33,8 @@ function ChatRoom() {
   const renderChat = () => {
     return chat.map(({ name, message }, index) => (
       <div key={index}>
-        <h3>
-          {name}: <span>{message}</span>
+        <h3 style={{color: "#2f72da"}}>
+          {name}: <span style={{color: "black"}}>{message}</span>
         </h3>
       </div>
     ));
@@ -55,7 +55,7 @@ function ChatRoom() {
   return (
     <div>
       <div className="card">
-      <form onSubmit={onMessageSubmit}>
+      <form onSubmit={onMessageSubmit} className="chatForm">
         <h1>Messenger</h1>
         <div className="name-field">
           <TextField

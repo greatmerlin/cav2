@@ -5,6 +5,7 @@ import MainBody from "./components/MainBody";
 import ChatRoom from "./components/ChatRoom";
 import About from "./components/About";
 import HowToPlay from "./components/HowToPlay";
+import Login from "./components/Login";
 
 function App() {
   
@@ -15,6 +16,7 @@ function App() {
 		  <Route path="/chat" element={< ChatRoom />} />
 		  <Route path="/about" element={< About />} />
 		  <Route path="/howtoplay" element={< HowToPlay />} />
+		  <Route path="/login" element={ <Login /> } />
 		</Routes>
 	  </Router>
 	);
