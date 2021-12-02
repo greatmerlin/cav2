@@ -74,7 +74,7 @@ function Login(props) {
         )}
 
         {!passwordIsCorrect && (
-          <Link to="/" className="registerBtn">
+          <Link to="/register" className="registerBtn">
             Register
           </Link>
         )}
