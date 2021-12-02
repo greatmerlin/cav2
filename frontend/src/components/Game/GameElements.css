@@ -1,0 +1,52 @@
+canvas {
+    padding: 0;
+    margin: auto;
+    display: block;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+  
+  .buttons {
+    position: fixed;
+    bottom: 5px;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    font-family: "Roboto Mono", sans-serif;
+    border-radius: 4px;
+    border: 1px solid #fff;
+    text-align: center;
+    opacity: 0.6;
+  }
+  
+  .buttonLeft {
+    left: 10px;
+    width: 30px;
+  }
+  
+  #buttonS {
+    left: 50px;
+  }
+  
+  .buttonRight {
+    right: 10px;
+    padding: 0 5px;
+  }
+  
+  #buttonUp {
+    right: 65px;
+  }
+
+  #buttMenu {
+    color: white;
+    margin-bottom: 5em;
+  }
+  
+  button {
+    right: 0;
+    left: 0;
+    width: 100px;
+    height: 45px;
+    margin: 0 auto;
+  }
+  
