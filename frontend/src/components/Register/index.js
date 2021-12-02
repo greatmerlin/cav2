@@ -18,20 +18,7 @@ function Register() {
         const data = { nickname, email, password, password2 };
         console.log(data);
 
-        
-
-        axios.post('http://localhost:3001/users/register', data)
-          .then(function (response) {
-            console.log(response);
-          })
-          .catch(function (error) {
-            console.log(error);
-          });
-
-        /*
-        const server = "http:localhost:3001/";
-
-        fetch(`${server}users/register`, {
+        fetch(`http://localhost:3001/users/register`, {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data)
@@ -39,7 +26,7 @@ function Register() {
         .then((response) => {
             setAccountExists(response.emailExists);
         })
-        */
+        
     }
 
     return (

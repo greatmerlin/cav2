@@ -58,37 +58,39 @@ router.post('/users/register', jsonParser, async (req, res) => {
 });
 
 // handle POST from LOGIN page
-app.post("/users/login", async (req, res) => {
+app.post("/users/login", jsonParser,  async (req, res) => {
 
-  let { name, email, password } = req.body;
+  let { email, password } = req.body;
 
   pool.query(
-      `SELECT * FROM users WHERE email = $1`,
-      [email],
-      (err, results) => {
-          // if the e-mail exists in the DB, the user exist -> go further
-          if (results.rows.length > 0) {
-              const user = results.rows[0];
+    `SELECT * FROM users WHERE email = $1`,
+    [email],
+    (err, results) => {
+        // if the e-mail exists in the DB, the user exist -> go further
+        if (results.rows.length > 0) {
+            const user = results.rows[0];
 
-              bcrypt.compare(password, user.password, (err, isMatch) => {
-                  if (isMatch) {
-                      // password matches with the decrypted password in db
-                      res.send({ passwordIsCorrect: true, username: user.name })
-                  }
-                  else {
-                      // password does not match with the one in db
-                      // TODO: handle validation
-                      res.send({ passwordIsCorrect: false })
-                  }
-              });
-          }
-          else {
-              //if the email does not exist
-              console.log("EMAIL DOES NOT EXIST in DB");
-              // TODO: validation
-          }
-      }
-  );
+            bcrypt.compare(password, user.password, (err, isMatch) => {
+                if (isMatch) {
+                    // password matches with the decrypted password in db
+                    res.send({ passwordIsCorrect: true, username: user.name })
+                }
+                else {
+                    // password does not match with the one in db
+                    // TODO: handle validation
+                    res.send({ passwordIsCorrect: false })
+                }
+            });
+        }
+        else {
+            //if the email does not exist
+            console.log("EMAIL DOES NOT EXIST in DB");
+            // TODO: validation
+        }
+    }
+);
+
+  
 });
 
 // chat messages - Websockets communication
