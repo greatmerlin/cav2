@@ -1,4 +1,3 @@
-import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MainBody from "./components/MainBody";
@@ -7,6 +6,7 @@ import About from "./components/About";
 import HowToPlay from "./components/HowToPlay";
 import Login from "./components/Login";
 import Register from "./components/Register";
+import CreateGame from "./components/CreateGame";
 
 function App() {
   
@@ -19,6 +19,7 @@ function App() {
 		  <Route path="/howtoplay" element={< HowToPlay />} />
 		  <Route path="/login" element={ <Login /> } />
 		  <Route path="/register" element={ <Register /> } />
+		  <Route path="/creategame" element={ <CreateGame /> } />
 		</Routes>
 	  </Router>
 	);
