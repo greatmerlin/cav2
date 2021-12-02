@@ -17,7 +17,9 @@ function Register() {
         const data = { nickname, email, password, password2 };
         console.log(data);
 
-        fetch('http://localhost:3001/users/register', {
+        const server = "http:localhost:3001/";
+
+        fetch(`${server}users/register`, {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data)
