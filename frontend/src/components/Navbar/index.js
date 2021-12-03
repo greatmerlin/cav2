@@ -44,7 +44,7 @@ const Navbar = ({ toggle }) => {
             <NavItem>
               <NavLinks
                 to="about"
-                smooth={true}
+                smooth="true"
                 duration={500}
                 spy={true}
                 exact="true"
@@ -56,7 +56,7 @@ const Navbar = ({ toggle }) => {
             <NavItem>
               <NavLinks
                 to="howtoplay"
-                smooth={true}
+                smooth="true"
                 duration={500}
                 spy={true}
                 exact="true"
@@ -68,7 +68,7 @@ const Navbar = ({ toggle }) => {
             <NavItem>
               <NavLinks
                 to="chat"
-                smooth={true}
+                smooth="true"
                 duration={500}
                 spy={true}
                 exact="true"
