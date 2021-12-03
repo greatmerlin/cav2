@@ -27,11 +27,14 @@ class Game extends Component {
     this.ballSpeedY = 0;
 
     //TODO: change the value below to select a difficulty
-    this.ballSpeedX = this.Height / 75;
+    this.ballSpeedX = this.Height / props.difficulty;
 
     this.paddle1Y = this.Height / 2 - this.paddleWidth / 2;
     this.paddle2Y = this.Height / 2 - this.paddleWidth / 2;
     this.paddleSpeed = this.Height > 800 ? 9 : 6;
+
+    console.log(props.difficulty);
+
   }
   componentDidMount() {
     this.btnRight.style.display = "none";

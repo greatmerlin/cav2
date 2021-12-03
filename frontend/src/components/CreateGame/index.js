@@ -17,7 +17,7 @@ function CreateGame(props) {
         <button
           className="diffBtn"
           onClick={() => {
-            props.setDifficulty("easy");
+            props.setDifficulty(75);
           }}
         >
           easy
@@ -25,7 +25,7 @@ function CreateGame(props) {
         <button
           className="diffBtn"
           onClick={() => {
-            props.setDifficulty("medium");
+            props.setDifficulty(50);
           }}
         >
           medium
@@ -33,7 +33,7 @@ function CreateGame(props) {
         <button
           className="diffBtn"
           onClick={() => {
-            props.setDifficulty("hard");
+            props.setDifficulty(25);
           }}
         >
           hard

@@ -12,7 +12,7 @@ import Game from "./components/Game";
 
 function App() {
 
-	const [difficulty, setDifficulty] = useState("");
+	const [difficulty, setDifficulty] = useState(75);
   
 	return (
 	  <Router>
