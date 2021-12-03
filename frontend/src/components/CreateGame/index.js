@@ -6,17 +6,6 @@ import { Link } from "react-router-dom";
 
 function CreateGame(props) {
 
-    // es muss hier eine gameID generiert werden, die auch zum Pfad angefügt wird
-    // zB game1 mit der ID 12345 -> /dashboard/12345
-    // game difficulty -> as state in einem späteren Zeitpunkt
-
-
-    const handleSubmit = () => {
-        //TODO: create a unique id for every game pass it as a state
-        // and according to the difficulty button, set the correct ball speed
-        
-    }
-
     //TODO: according to the difficulty button, set the correct ball speed
 
     return (
@@ -26,8 +15,7 @@ function CreateGame(props) {
 
             <form>
 
-                <label className="gameName">Game Name: </label>
-                <input type="text" name="gamename" value={props.gameName} onChange={(e) => props.setGameName(e.target.value)} required />
+                <label className="gameName">Game Difficulty (optional, default: easy): </label>
                 <div>
                     <button className="diffBtn">easy</button>
                     <button className="diffBtn">medium</button>
@@ -35,10 +23,10 @@ function CreateGame(props) {
                 </div>
                 <br />
                 <div>
-                    <button className="createGameBtn" onClick={handleSubmit}>create game</button>
+                    <Link to="/game" ><button className="createGameBtn">create game</button></Link>
                 </div>
             </form>
-            <Link to="/register" ><button className="cancelBtn">Back</button></Link>
+                <Link to="/register" ><button className="cancelBtn">Back</button></Link>
             <Footer />
         </div>
     )
