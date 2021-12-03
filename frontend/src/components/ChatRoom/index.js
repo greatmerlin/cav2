@@ -5,6 +5,18 @@ import React, { useEffect, useRef, useState } from "react";
 import io from "socket.io-client";
 import "./ChatRoomElements.css";
 
+const BackButton = styled(LinkRouter)`
+background: #000;
+padding: 10px;
+border-radius: 4px;
+color: #25b3ac;
+font-size: 20px;
+cursor: pointer;
+text-align: center;
+text-decoration: none;
+margin: 10px;
+`;
+
 function ChatRoom() {
   const [state, setState] = useState({ message: "", name: "" });
   const [chat, setChat] = useState([]);
@@ -12,7 +24,7 @@ function ChatRoom() {
   const socketRef = useRef();
 
   useEffect(() => {
-    socketRef.current = io.connect("http://localhost:3001");
+    socketRef.current = io.connect("http://localhost:4000");
     socketRef.current.on("message", ({ name, message }) => {
       setChat([...chat, { name, message }]);
     });
@@ -40,17 +52,7 @@ function ChatRoom() {
     ));
   };
 
-  const BackButton = styled(LinkRouter)`
-    background: #000;
-    padding: 10px;
-    border-radius: 4px;
-    color: #25b3ac;
-    font-size: 20px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    margin: 10px;
-  `;
+
 
   return (
     <div>

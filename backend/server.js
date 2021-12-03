@@ -7,8 +7,12 @@ const app = express();
 app.use("/",router);
 
 //
-const http = require('http').createServer(app);
-const io = require('socket.io')(http);
+const http = require('http');
+const server = http.createServer(app);
+const { Server } = require("socket.io");
+const io = new Server(server);
+//
+
 const { pool } = require("./dbConfig.js");
 const bcrypt = require("bcrypt");
 //
@@ -104,8 +108,12 @@ io.on('connection', socket => {
   })
 
 app.listen(3001,() => {
-console.log("Started on PORT 3001");
+console.log("Http Server started on PORT 3001");
 })
+
+server.listen(4000, () => {
+    console.log('Websockets listening on Port 4000');
+  });
 
 
 
