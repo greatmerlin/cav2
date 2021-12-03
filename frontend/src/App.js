@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MainBody from "./components/MainBody";
@@ -10,6 +11,8 @@ import CreateGame from "./components/CreateGame";
 import Game from "./components/Game";
 
 function App() {
+
+	const [difficulty, setDifficulty] = useState("");
   
 	return (
 	  <Router>
@@ -20,8 +23,8 @@ function App() {
 		  <Route path="/howtoplay" element={< HowToPlay />} />
 		  <Route path="/login" element={ <Login /> } />
 		  <Route path="/register" element={ <Register /> } />
-		  <Route path="/creategame" element={ <CreateGame /> } />
-		  <Route path="/game" element={ < Game /> } />
+		  <Route path="/creategame" element={ <CreateGame difficulty={difficulty} setDifficulty={setDifficulty} /> } />
+		  <Route path="/game" element={ < Game difficulty={difficulty}  /> } />
 		</Routes>
 	  </Router>
 	);

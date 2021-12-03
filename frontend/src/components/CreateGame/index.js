@@ -1,35 +1,57 @@
-import React from 'react';
-import './CreateGameElements.css';
-import Navbar from '../Navbar';
-import Footer from '../Footer';
+import React from "react";
+import "./CreateGameElements.css";
+import Navbar from "../Navbar";
+import Footer from "../Footer";
 import { Link } from "react-router-dom";
 
 function CreateGame(props) {
+  return (
+    <div style={{ color: "#25b3ac" }}>
+      <Navbar />
+      <h1 className="titleCreateGame">Create Game </h1>
 
-    //TODO: according to the difficulty button, set the correct ball speed
+      <label className="gameName">
+        Game Difficulty (optional, default: easy):{" "}
+      </label>
+      <div>
+        <button
+          className="diffBtn"
+          onClick={() => {
+            props.setDifficulty("easy");
+          }}
+        >
+          easy
+        </button>
+        <button
+          className="diffBtn"
+          onClick={() => {
+            props.setDifficulty("medium");
+          }}
+        >
+          medium
+        </button>
+        <button
+          className="diffBtn"
+          onClick={() => {
+            props.setDifficulty("hard");
+          }}
+        >
+          hard
+        </button>
+      </div>
+      <br />
+      <div>
+        <Link to="/game">
+          <button className="createGameBtn">create game</button>
+        </Link>
+      </div>
 
-    return (
-        <div style={{ color: "#25b3ac" }}>
-            <Navbar />
-            <h1 className="titleCreateGame">Create Game </h1>
-
-            <form>
-
-                <label className="gameName">Game Difficulty (optional, default: easy): </label>
-                <div>
-                    <button className="diffBtn">easy</button>
-                    <button className="diffBtn">medium</button>
-                    <button className="diffBtn">hard</button>
-                </div>
-                <br />
-                <div>
-                    <Link to="/game" ><button className="createGameBtn">create game</button></Link>
-                </div>
-            </form>
-                <Link to="/register" ><button className="cancelBtn">Back</button></Link>
-            <Footer />
-        </div>
-    )
+      <Link to="/register">
+        <button className="cancelBtn">Back</button>
+      </Link>
+      <Footer />
+    </div>
+  );
 }
 
 export default CreateGame;
