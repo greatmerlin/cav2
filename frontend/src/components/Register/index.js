@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import './RegisterElements.css';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
-import axios from 'axios';
+//import axios from 'axios';
 
 function Register() {
 
@@ -16,16 +16,21 @@ function Register() {
     const handleSubmit = (e) => {
         e.preventDefault();
         const data = { nickname, email, password, password2 };
-        console.log(data);
+        console.log(data);  
 
         fetch(`http://localhost:3001/users/register`, {
             method: 'POST',
-            headers: { "Content-Type": "application/json" },
+            headers: { 
+                "Content-Type": "application/json",
+                
+                 },
             body: JSON.stringify(data)
         }).then(res => res.json())
         .then((response) => {
             setAccountExists(response.emailExists);
         })
+
+        
         
     }
 

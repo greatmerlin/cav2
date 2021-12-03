@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const router = express.Router();
 const app = express();
+
 // add router in express app
 app.use("/",router);
 
@@ -15,6 +16,8 @@ const bcrypt = require("bcrypt");
 // create application/json parser
 const jsonParser = bodyParser.json()
 
+const cors = require('cors');
+app.use(cors());
 
 router.post('/users/register', jsonParser, async (req, res) => {
 
