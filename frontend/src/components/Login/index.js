@@ -1,19 +1,20 @@
 import { React, useState } from "react";
 import { Link } from "react-router-dom";
 import "./LoginElements.css";
-import Navbar from '../Navbar';
-import Footer from '../Footer';
+import Navbar from "../Navbar";
+import Footer from "../Footer";
 
 function Login(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordIsCorrect, setPasswordIsCorrect] = useState(false);
+  //const [playerA, setPlayerA] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = { email, password };
 
-    fetch("/users/login", {
+    fetch("http://localhost:3001/users/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -21,7 +22,7 @@ function Login(props) {
       .then((res) => res.json())
       .then((response) => {
         setPasswordIsCorrect(response.passwordIsCorrect);
-        props.setPlayerA(response.username);
+        //props.setPlayerA(response.username);
       });
   };
 
@@ -60,7 +61,7 @@ function Login(props) {
         <div>
           <br />
           {passwordIsCorrect && (
-            <Link to="/" className="buttonNext">
+            <Link to="/creategame" className="buttonNext">
               Click here to log into the game
             </Link>
           )}
